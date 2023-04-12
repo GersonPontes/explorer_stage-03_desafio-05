@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+}
+
+body{
+  background: #404040;
+}
+
+.page{
+  width: 140rem;
+  height: 95rem;
+  margin: auto;
+  background-image: url(assets/fundo.svg);
+  background-repeat: no-repeat;
+  padding: 23rem 17rem 20rem;
+}
+
+.holes_row{
+  display: flex;
+  gap: 5.5rem;
+  justify-content: space-between;
+}
+
+.holes_row + .holes_row{
+  margin-top: 5rem;
+}
+
+.hole{
+  width: 23rem;
+  height: 17rem;
+  background-image: url(assets/toupeira0.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.holes_row:nth-child(1) .hole:nth-child(4){
+  animation: ani_toupeira 1000ms 3000ms;
+}
+
+.holes_row:nth-child(2) .hole:nth-child(2){
+  animation: ani_toupeira 1000ms 1000ms;
+}
+
+.holes_row:nth-child(3) .hole:nth-child(3){
+  animation: ani_toupeira 1000ms 2000ms;
+}
+
+@keyframes ani_toupeira{
+  0%{
+    background-image: url(assets/toupeira0.svg);
+  } 
+  15%{
+    background-image: url(assets/toupeira1.svg);
+  }
+  30%{
+    background-image: url(assets/toupeira2.svg);
+  }
+  45%{
+    background-image: url(assets/toupeira3.svg);
+  }
+  60%{
+    background-image: url(assets/toupeira2.svg);
+  }
+  80%{
+    background-image: url(assets/toupeira1.svg);
+  }
+  100%{
+    background-image: url(assets/toupeira0.svg);
+  }
+}
